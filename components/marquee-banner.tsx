@@ -1,8 +1,14 @@
 import { SITE_TAGLINE } from "@/lib/constants";
 
+// Minimum number of items in one lap, so the row stays wider than the
+// viewport on ultra-wide monitors even when the feed only has a few episodes.
+const MIN_ITEMS_PER_LAP = 16;
+
 export function MarqueeBanner({ items }: { items: string[] }) {
   const content = items.length ? items : [SITE_TAGLINE];
-  const looped = [...content, ...content];
+  const repeatCount = Math.max(1, Math.ceil(MIN_ITEMS_PER_LAP / content.length));
+  const lap = Array.from({ length: repeatCount }, () => content).flat();
+  const looped = [...lap, ...lap];
 
   return (
     <div
