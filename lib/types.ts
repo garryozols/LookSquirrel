@@ -17,5 +17,5 @@ export interface Episode {
 export interface Platform {
   name: string;
   url: string;
-  icon: "spotify" | "apple" | "amazon" | "rss" | "generic";
+  icon: "spotify" | "apple" | "amazon" | "rss" | "facebook" | "generic";
 }

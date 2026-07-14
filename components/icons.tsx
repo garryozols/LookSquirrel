@@ -81,6 +81,18 @@ export function PlatformIcon({ icon }: { icon: Platform["icon"] }) {
           />
         </svg>
       );
+    case "facebook":
+      return (
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" className="h-6 w-6">
+          <circle cx="12" cy="12" r="9.25" stroke="currentColor" strokeWidth="1.5" />
+          <path
+            d="M13.6 20v-6.4h2.15l.32-2.5h-2.47V9.45c0-.72.2-1.22 1.24-1.22h1.32V6c-.23-.03-1-.1-1.9-.1-1.9 0-3.2 1.15-3.2 3.28v1.82H8.9v2.5h2.06V20"
+            stroke="currentColor"
+            strokeWidth="1.3"
+            strokeLinejoin="round"
+          />
+        </svg>
+      );
     default:
       return (
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" className="h-6 w-6">
